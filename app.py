@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="plantillas")
 
 app.secret_key = os.environ.get(
     "SECRET_KEY",
