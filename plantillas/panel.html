@@ -3,87 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel | TECHESPINOZA</title>
-    <style>
-        * { box-sizing: border-box; }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #eef3f9;
-            color: #243447;
-        }
-        header {
-            background: #123b68;
-            color: white;
-            padding: 22px;
-        }
-        header h1 { margin: 0; }
-        main {
-            max-width: 1100px;
-            margin: 30px auto;
-            padding: 20px;
-        }
-        .welcome {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px #00000012;
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 18px;
-            margin-top: 25px;
-        }
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            border-left: 5px solid #1769aa;
-        }
-        .card h3 { color: #1769aa; }
-        a {
-            display: inline-block;
-            margin-top: 15px;
-            color: white;
-            background: #1769aa;
-            padding: 12px 18px;
-            border-radius: 7px;
-            text-decoration: none;
-        }
-        @media (max-width: 600px) {
-            main { margin: 15px auto; padding: 12px; }
-            header { padding: 18px; }
-        }
-    </style>
+    <title>Panel - TECHESPINOZA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
 </head>
 <body>
-    <header>
-        <h1>TECHESPINOZA</h1>
-        <p>Sistema de inventario y control de equipos informáticos</p>
-    </header>
+    <main class="contenedor">
+        <h1>SISTEMA DE TECHESPINOZA</h1>
+        <h2>Panel principal</h2>
 
-    <main>
-        <section class="welcome">
-            <h2>Bienvenido al panel principal</h2>
-            <p>Administra y consulta la información de tus equipos informáticos.</p>
-            <a href="/logout">Cerrar sesión</a>
-        </section>
+        <p>Bienvenido al sistema de inventario y control de equipos informáticos.</p>
 
-        <section class="cards">
-            <div class="card">
-                <h3>Equipos</h3>
-                <p>Control de equipos informáticos.</p>
-            </div>
-            <div class="card">
-                <h3>Reportes</h3>
-                <p>Consulta la información del inventario.</p>
-            </div>
-            <div class="card">
-                <h3>Usuarios</h3>
-                <p>Administración de usuarios del sistema.</p>
-            </div>
-        </section>
+        <nav>
+            <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+        </nav>
     </main>
 </body>
 </html>
